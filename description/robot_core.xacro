@@ -8,4 +8,23 @@
     <link name="base_link">
     </link>
 
+    <!-- Chassis Joint -->
+    
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="chassis" />
+        <origin xyz="0 0 0" />
+    </joint>
+
+    <!-- Chassis Link -->
+
+    <link name="chassis">
+        <visual>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.15 0.15 0.15"/>
+            </geometry>
+            <material name="white" />
+        </visual>
+
 </robot>
